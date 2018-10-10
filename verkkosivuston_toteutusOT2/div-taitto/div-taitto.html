@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Div-taitto</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        background-color: #96ceb4;
+        color: white;
+    }
+
+    h3 {
+        background-color: wheat;
+    }
+
+    .palsta {
+        width: 30%;
+        border: px solid gray;
+        border-bottom: white;
+        border-left: white;
+        border-top: white;
+        font: 12px georgia;
+    }
+
+    .palsta2 {
+        width: 70%;
+        font: 12px georgia;
+        border: 2px solid gray;
+        border-bottom: white;
+        border-right: white;
+        border-top: white;
+    }
+    .palsta, .palsta2 {
+        float: left;
+        padding: 15px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .ala_osa {
+        color: white;
+        background-color: #96ceb4;
+    }
+</style>
+</head>
+<body>
+    <h1>Otsikko</h1>
+<div class="row">
+    <div class="palsta">
+        <h3>Lorem ipsum</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <h3>Sit amet</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Vivamus accumsan lacimia ante, at placerat nisl commodonec.</p>
+    </div>   
+    <div class="palsta2">
+        <h2>Otsikko</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus nihil sapiente distinctio, reiciendis hic neque maxime officiis sunt. 
+        Perspiciatis consequuntur eius minus ipsa ab officiis placeat facere ratione, quos unde?</p>
+        <h2>Otsikko</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus nihil sapiente distinctio, reiciendis hic neque maxime officiis sunt. 
+        Perspiciatis consequuntur eius minus ipsa ab officiis placeat facere ratione, quos unde?</p>
+        <h2>Otsikko</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus nihil sapiente distinctio, reiciendis hic neque maxime officiis sunt. 
+        Perspiciatis consequuntur eius minus ipsa ab officiis placeat facere ratione, quos unde?</p>
+    </div>
+</div>
+    <div class="ala_osa">
+        <p>Copyright Aku Ankka</p>
+    </div>
+</body>
+</html>
