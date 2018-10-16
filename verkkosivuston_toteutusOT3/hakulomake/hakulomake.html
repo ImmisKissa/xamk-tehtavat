@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hakulomake</title>
+<style>
+    label {
+        display: inline-block;
+        width: 7em;
+        margin: 5px;
+    }
+
+    h2 {
+        background-color: lightblue;
+        color: green;
+        margin: 0;
+        padding: 10px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    select {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .koko_sivu {
+        width: 550px;
+        border: 5px solid lightblue;
+        width: 550px;
+    }
+
+    .haku_sivu {
+        background-image: url("taustakuva.jpg");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: #adfab7
+    }
+ 
+    .kuva {
+        text-align: center;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+<div class="koko_sivu">
+    <div class="haku_sivu">
+        <h2>MYYTÄVÄT JA VUOKRATTAVAT ASUNNOT</h2>
+        <p>Esim. postinumero tai kunta</p>
+        <label for="alue">Alue</label><input type="text"><br>
+        <label for="asuintyyppi">Asuintyyppi</label>
+        <select>
+            <option value="kerrostalo">Kerrostalo</option>
+            <option value="rivitalo">Rivitalo</option>
+            <option value="omakotitalo">Omakotitalo</option>
+        </select>
+        <label for="minimi">Minimihinta</label><input type="text"><br>
+        <label for="lämmitys">Lämmitysmuoto</label>
+        <select>
+            <option value="kaukolämpö">Kaukolämpö</option>
+            <option value="maalämpö">Maalämpö</option>
+        </select>
+        <label for="maksimi">Maksimihinta</label><input type="text"><br>
+        <label for="huoneluku">Huoneluku</label>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <label for="kunto">Asunnon kunto</label>
+        <select>
+            <option value="huono">Huono</option>
+            <option value="kohtalainen">Kohtalainen</option>
+            <option value="hyva">Hyvä</option>
+        </select><br>
+        <label for="neliot">Neliöitä</label>
+        <select>
+            <option value="alle_30">Alle 30</option>
+            <option value="yli_30">Yli 30</option>
+        </select>
+        <label for="m2">m2</label>
+        <input type="radio" name="muoto" value="vuokra">Vuokra
+        <input type="radio" name="muoto" value="omistus">Omistus
+        <div class="kuva">
+            <img src="hakunappi.png">
+        </div>
+    </div>
+</div>
+</body>
+</html>

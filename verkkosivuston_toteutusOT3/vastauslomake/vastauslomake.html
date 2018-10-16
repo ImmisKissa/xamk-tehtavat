@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vastauslomake</title>
+<style>
+    .box {
+        border: 1px solid black;
+        width: 350px;
+        padding: 20px;
+    }
+
+    input {
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid lightgray;
+        border-bottom: 2px solid lightgray;
+        background-color: wheat;
+    }
+
+    button {
+        background-color: darkblue;
+        color: white;
+        width: 81px;
+        margin: 1px
+    }
+
+    label {
+        display: inline-block;
+        width: 5em;
+        margin: 1px;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <label for="nimi">Nimi:</label><input type="text"><br>
+        <label for="email">Sähköposti:</label><input type="text"><br>
+        <label for="vastaus">Vastaus:</label><input type="text"><br>
+        <label for="laheta"></label><button type="button">Lähetä</button>
+        <button type="button">Tyhjennä</button>
+    </div>
+</body>
+</html>
