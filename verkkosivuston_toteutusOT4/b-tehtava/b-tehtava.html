@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>B-tehtävä</title>
+<style>
+    body {
+
+    }
+
+    .box {
+        width: 960px;
+        margin: 0px;
+        padding: 0px;
+        border: 1px solid grey;
+    }
+
+    .header {
+        background-color: #80ced6;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 35px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .header::first-letter {
+        font-size: 60px;
+    }
+
+    .footer {
+        background-color: #80ced6;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+    .vasen_palsta {
+        width: 210px;
+        padding: 10px;
+        float: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+    }
+
+    .img4 {
+        float: right;
+    }
+
+    .img3 {
+        float: right
+    }
+
+    .ksk_palsta {
+        width: 460px;
+        padding: 10px;
+        float: left;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+    }
+
+    .img2 {
+        float: right;
+    }
+
+    .oikea_palsta {
+        width: 210px;
+        padding: 10px;
+        float: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+    }
+
+    .oikea_palsta li {
+        padding: 5px;
+        border: 2px solid darkgrey;
+        border-left: white;
+        border-right: white;
+        border-top: white;
+    }
+
+    h2 {
+        background-color: #80ced6;
+        color: white;
+        padding: 5px;
+    }
+
+    .footer2 {
+        width: 960px;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        background-color: #80ced6
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+</head>
+<body>
+<div class="box">
+    <div class="header">
+        <p>Universitas Lorem</p>
+        <img src="kuva1.jpg">
+    </div>
+    <div class="footer">
+        <p><a href="https://www.youtube.com">Domus</a>
+        <a href="https://www.youtube.com">Ullamcorper</a>
+        <a href="https://www.youtube.com">Consectetur</a>
+        <a href="https://www.youtube.com">Vivamus</a></p>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="vasen_palsta">
+            <h3>Nuevo</h3>
+            <h4>Darmouth killing</h4>
+            <img class="img4" src="kuva4.jpg">
+            <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem.</p>
+            <p><a href="https://www.youtube.com">>>More</a></p>
+            <h4>Ducburg artist named</h4>
+            <img class="img3" src="kuva3.jpg">
+            <p>Lorem ipsum dolor sit amet,
+            conse ctetur adip isc ing elit.
+            Viv amus acc umsan laci niaa ante,
+            at placerat nisl comm odo nec. Aenean
+            dui libero, accum san non elementum
+            id. ullam corper sit amet sem.</p>
+            <p><a href="https://www.youtube.com">>>More</a></p>
+        </div>
+        <div class="ksk_palsta">
+            <h3>Aenean dui libero</h3>
+            <img class="img2" src="kuva2.jpg">
+            <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem. Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem.</p>
+            <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem.</p>
+            <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem.</p>
+        </div>
+        <div class="oikea_palsta">
+            <h2>Resources for</h2>
+            <ul>
+                <li><a href="https://www.youtube.com">Campus life</a></li>
+                <li><a href="https://www.youtube.com">Staff</a>></a></li>
+                <li><a href="https://www.youtube.com">Student</a></li>
+                <li><a href="https://www.youtube.com">Alumni</a></li>
+                <li><a href="https://www.youtube.com">Current</a></li>
+            </ul>
+            <h2>Rapidus</h2>
+            <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Vivamus accumsan lacinia 
+            ante, at placerat nisl commodonec. Aenean 
+            dui libero, accumsan non elementum
+            id, ullamcorper sit. amet sem.</p>
+        </div>
+    </div>
+    <div class="footer2">
+        <p>Company Name Loremipsum Oy Duckburg tel.+358 123 123</p>
+        <p>Copyright © Ante Libero</p>
+    </div>
+</div>
+</body>
+</html>
