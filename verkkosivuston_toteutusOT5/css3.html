@@ -3,8 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS3</title>
+<style>
+    @font-face {
+        font-family: myFirstFont;
+        src: url(AngelinaScript.ttf);
+    }
+
+    h1 {
+        font-family: myFirstFont;
+        text-align: left;
+    }
+
+    .koko_sivu {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .header {
+        border: 1px solid black;
+        border-top: white;
+        border-right: white;
+        border-left: white;
+    }
+
+    .header p {
+        text-align: right;
+    }
+
+    a {
+        background-color: #FFFF66;
+    }
+
+    a:hover {
+        background-color: #b6c0d2;
+    }
+
+    .footer {
+        column-count: 3;
+        border: 3px solid #b6c0d2;
+        border-left: white;
+        border-top: white;
+        padding: 10px;
+    }
+
+    .boxit_kuvat {
+        border: 3px solid #b6c0d2;
+        border-left: white;
+        border-top: white;
+        padding: 10px;
+    }
+
+    .boxit {
+        float: left;
+    }
+
+    .box1 {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    .box2 {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    .box3 {
+        width: 200px;
+        padding: 5px;
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    h2 {
+        color: #FF6600;
+    }
+
+    .kuvat img {
+        text-align: right;
+        width: 180px;
+        height: 180px;
+        margin: 10px;
+        opacity: 0.6;
+        transition: 0.3s;
+        border-radius: 100%;
+        background-color: #FF6600;
+    }
+
+    .kuvat img:hover {
+        -webkit-animation: spin 1.5s linear 1;
+        -moz-animation: spin 1.5s linear 1;
+        animation: spin 1.5s linear1;
+        opacity: 1;
+    } 
+
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    
+    .ala_osa {
+        text-align: center;
+        border: 1px solid black;
+        border-bottom: white;
+        border-right: white;
+        border-left: white;
+    }
+
+    .ala_osa p {
+        font-family: myFirstFont;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
 </head>
 <body>
-    
+<div class="koko_sivu">
+    <div class="header">
+        <h1>Niko Immonen</h1>
+        <p><a href="https://www.youtube.com">Info</a>
+        <a href="https://www.youtube.com">Jäsenet</a>
+        <a href="https://www.youtube.com">Palvelut</a>
+        <a href="https://www.youtube.com">Varusteet</a></p>
+    </div>
+    <br>
+    <div class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Facilis dolorem natus eum blanditiis suscipit distinctio, 
+        aliquam placeat nostrum cupiditate voluptatum ipsum omnis 
+        voluptas, in id atque? Ratione eum voluptatibus eaque? Lorem 
+        ipsum, dolor sit amet consectetur adipisicing elit. Veritatis 
+        blanditiis voluptatibus sequi ducimus quam amet. Porro eaque 
+        alias veritatis ullam nihil debitis ut saepe labore, quos optio 
+        a pariatur quia. Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Sed repellat, exercitationem sint obcaecati 
+        nulla suscipit esse ea quasi maxime consectetur molestias 
+        dignissimos assumenda reiciendis blanditiis aliquam neque 
+        quaerat corrupti accusamus?</p>
+    </div>
+    <br>
+    <div class="boxit_kuvat">
+    <div class="wrapper clearfix">
+        <div class="boxit">
+        <div class="box1">
+            <h2>Lorem ipsum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ratione deleniti perspiciatis suscipit molestiae, quam adipisci.</p>
+        </div>
+        <br>
+        <div class="box2">
+            <h2>Lorem ipsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ratione deleniti perspiciatis suscipit molestiae, quam adipisci.</p>
+        </div>
+        <br>
+        <div class="box3">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ratione deleniti perspiciatis suscipit molestiae, quam adipisci.</p>
+        </div>
+        </div>
+        <div class="kuvat">
+            <img src="syksy.png">
+            <img src="kesa.png">
+            <img src="kuva1.jpg">
+            <img src="">
+            <img src="">
+            <img src="kevat.png">
+            <img src="talvi.png">
+            <img src="kuva2.jpg">
+            <img src="">
+        </div>
+    </div>
+    </div>
+        <br>
+    <div class="ala_osa">
+        <p>Copyright© Niko Immonen</p>
+    </div>
+</div>
 </body>
 </html>
