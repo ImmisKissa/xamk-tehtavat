@@ -5,7 +5,7 @@
     <title>ot2c</title>
 </head>
 <body>
-    <form action="ot2c.php" action="POST">
+    <form action="ot2c.php" method="POST">
         <label for="nimi"></label>
         <p>Nimi:</p>
         <input type="text" name="nimi">
@@ -19,10 +19,20 @@
 
 if (isset($_POST['nimi']) && (isset($_POST['maara']))) {
 
-    $nimi = $_POST['nimi'];
-    $maara = $_POST['maara'];
+    if(isset($_POST['nimi'])) {
+        $nimi = $_POST['nimi'];
+    }
 
-   
+    if (isset($_POST['maara'])) {
+        $maara = $_POST['maara'];
+        if (is_numeric($maara)) {
+
+        }
+    }
+
+    for ($x = 1; $x <= $maara; $x++) {
+        echo "$nimi <br>";
+    }
 }
 
 ?>
