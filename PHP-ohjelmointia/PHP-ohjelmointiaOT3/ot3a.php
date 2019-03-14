@@ -13,7 +13,26 @@
 
 <?php
 
+if (isset($_POST['sana'])) {
+    $sana = $_POST['sana'];
+}
+
+    function ywt_get_first_char($str) {
+        if($str)
+            return strtolower(substr($str, 0, 1));
     
+        return false;
+    }
+
+    function ywt_get_last_char($str) {
+        if($str)
+            return strtolower(substr($str, -1));
+    
+        return false;
+    }
+
+    echo ywt_get_first_char($sana);
+    echo ywt_get_last_char($sana);
 
 ?>
 </body>
