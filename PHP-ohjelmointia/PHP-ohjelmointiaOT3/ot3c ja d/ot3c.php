@@ -38,7 +38,7 @@ if (isset($_POST['nimi']) && (isset($_POST['viesti']))) {
     $myfile = fopen("palautteet.txt", "a");
     $txt = "$nimi; $viesti\n";
     $remove_character = array("\r\n", "\r");
-    $txt = str_replace($remove_character , ' ' , $txt);
+    $txt = str_replace($remove_character , "<br>", $txt);
     fwrite($myfile, $txt);
     fclose($myfile);
     
