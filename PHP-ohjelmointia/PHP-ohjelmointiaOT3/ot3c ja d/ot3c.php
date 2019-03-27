@@ -6,6 +6,7 @@
 </head>
 <body>
     <form action="ot3c.php" method="POST">
+        <h3>Nimessä ja viestissä pitää olla vähintään 5 merkkiä!</h3>
         <label for="nimi"></label>
             <p>Nimi: <input type="text" name="nimi"></p>
         <label for="viesti"></label>
@@ -15,23 +16,30 @@
 
 <?php
 
+$errors = [];
+
 if (isset($_POST['nimi']) && (isset($_POST['viesti']))) {
 
     $nimi = $_POST['nimi'];
     $viesti = $_POST['viesti'];
 
-    if (strlen($nimi) > 5) {
-        
-    } else {
-        die;
-    }
+    if (strlen($nimi) < 5) {
+        $errors[] = 'Nimi on liian lyhyt!';
+    } 
 
-    if (strlen($viesti) > 5) {
+    if (strlen($viesti) < 5) {
+        $errors[] = 'Viesti on liaan lyhyt!';
+    } 
+
+    if (count($errors) > 0) {
         
-    } else {
-        die;
-    }
-    
+        for ($errors); {
+            
+        }
+
+        die ("");
+    } 
+
     htmlspecialchars($nimi);
     htmlspecialchars($viesti);
 

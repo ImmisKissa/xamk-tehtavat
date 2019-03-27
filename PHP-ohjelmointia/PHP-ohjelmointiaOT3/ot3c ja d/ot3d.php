@@ -14,9 +14,11 @@ while(!feof($myfile)) {
     $rivi = fgets($myfile);
 
     if(strlen($rivi) > 0) {
-        echo (explode(";", $rivi));
-        $myfile = "<h1>$rivi[0]</h1>";
-        $myfile = "<p>$rivi[1]</p>";
+        $rivi = explode(";", $rivi);
+        $nimi = "<h1>$rivi[0]</h1>";
+        $viesti = "<p>$rivi[1]</p>";
+
+        echo "$nimi $viesti";
     }
 }
 
