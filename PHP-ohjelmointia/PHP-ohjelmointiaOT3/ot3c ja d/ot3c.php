@@ -28,13 +28,13 @@ if (isset($_POST['nimi']) && (isset($_POST['viesti']))) {
     } 
 
     if (strlen($viesti) < 5) {
-        $errors[] = 'Viesti on liaan lyhyt!';
+        $errors[] = 'Viesti on liian lyhyt!';
     } 
 
     if (count($errors) > 0) {
-        
-        for ($errors); {
-            
+          
+        for ($x = 0; $x < count($errors); $x++) {
+        echo $errors[$x] . "<br>";
         }
 
         die ("");
