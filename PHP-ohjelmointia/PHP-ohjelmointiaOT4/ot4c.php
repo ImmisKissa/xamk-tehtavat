@@ -1,3 +1,24 @@
+<?php 
+function tarkistaHetu($hetu){
+
+    $vuosi = substr($hetu,4,2);
+    $vuosisataMerkki = substr($hetu,6,1);
+
+    if ($vuosisataMerkki === "A") {
+        $vuosisata = "20";
+    } elseif ($vuosisataMerkki === "-") {
+        $vuosisata = "19";
+    } else {
+        $vuosisata = "18";
+    }
+
+    if (substr($hetu,4,3)) {
+        
+        return $vuosisata . $vuosi;
+    } 
+    
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,15 +37,9 @@
 
 if (isset($_POST['hetu'])) {
     $hetu = $_POST['hetu'];
-
-    function hetuVuosi($hetu) {
-        if (substr($hetu,6,1)) {
-            echo "2000";
-        }
-    }
-
-    echo substr($hetu,4,3);
+    echo tarkistaHetu($hetu);
 }
+
 
 ?>
 
