@@ -15,49 +15,41 @@
 
 <?php
 
-if (isset($_POST['hinta']) && (isset($_POST['pinta_ala'])) && (isset($_POST['nelio_hinta']))) {
+if ( isset($_POST['hinta']) && isset($_POST['pinta_ala']) ) {
+
+    include "asunto_class.php";
+
+    $asunto = new Asunto();
 
     $hinta = $_POST['hinta'];
     $pinta_ala = $_POST['pinta_ala'];
 
-$errors = [];
+    $errors = [];
 
     if (is_numeric($hinta)) {
         echo "Hinta: $hinta";
+        $asunto->asetaHinta($hinta);
     } else {
-        $errors[] = "Aseta hinta numerona!!";
+        $errors[] = "Aseta hinta numeroina!";
     }
 
     if (is_numeric($pinta_ala)) {
        echo "Pinta-ala: $pinta_ala";
+       $asunto->asetaPinta_ala($pinta_ala);
     } else {
-        $errors[] = "Aseta pinta-ala numeroina!!";
+        $errors[] = "Aseta pinta-ala numeroina!";
     }
 
-        function asetaHinta($hinta) {
-            return $hinta;
-        }
-
-        function asetaPinta_ala($pinta_ala) {
-            return $pinta_ala;
-        }
-
-        function laskeNelioHinta($nelio_hinta) {
-            return $nelio_hinta;
-        }
-
-        if (count($errors) > 0) {
-          
-            for ($x = 0; $x < count($errors); $x++) {
+    if (count($errors) > 0) {
+        
+        for ($x = 0; $x < count($errors); $x++) {
             echo $errors[$x] . "<br>";
-            }
-    
-            die ("");
-        } 
+        }
 
-        $nelio_hinta = $hinta * $pinta_ala;
+        die ("");
+    }
 
-        echo "Neliöhinta: $nelio_hinta";
+    echo $asunto->laskeNeliohinta();
 }
 
 ?>
