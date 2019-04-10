@@ -49,7 +49,7 @@ if ( isset($_POST['hinta']) && isset($_POST['pinta_ala']) ) {
         die ("");
     }
 
-    echo $asunto->laskeNeliohinta();
+    echo "Hinta per. neliö: " . $asunto->laskeNeliohinta();
 }
 
 ?>

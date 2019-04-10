@@ -16,7 +16,7 @@ class Asunto {
 
     function asetaPinta_ala($pinta_ala) 
     {
-        $this->$pinta_ala = $pinta_ala;
+        $this->pinta_ala = $pinta_ala;
     }
 
     function laskeNelioHinta() 
@@ -29,6 +29,6 @@ class Asunto {
             return "Pinta-alaa ei ole asetettu!";
         }
 
-        return $hinta / $pinta_ala;
+        return $this->hinta / $this->pinta_ala;
     }
 }
