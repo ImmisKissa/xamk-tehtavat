@@ -1,0 +1,5 @@
+﻿Tämä on mahdollisimman yksinkertainen demo tietokannan mukaan ottamisesta PHP-ohjelmassa.
+Ohjelmasta on (pedagogisista syistä) riisuttu kaikki ylimääräinen kuten käyttöliittymän toiminnallisuudet ja tyylit. Jokainen ohjelma ajetaan erikseen, koska etusivuakaan ei ole.
+Myös tietojen tarkistukset, tietoturva-asiat ja virheilmoitukset on karsittu. 
+Ohjelmissa ei ole myöskään otettu huomioon Ajax-toiminnallisuutta tai REST API:a. 
+ohjelmaa, jolla tietoja voi lisätä, muuttaa, poistaa ja hakea, sanotaan CRUD-ohjelmaksi (Create, Read, Update, Delete). Lisätietoa aiheesta löytyy siis hakusanoilla PHP CRUD
