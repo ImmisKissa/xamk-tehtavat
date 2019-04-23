@@ -14,7 +14,7 @@ CREATE TABLE sarjataulukko (
 );
 
 INSERT INTO sarjataulukko (joukkue,ottelut,voitot,tasapelit,tappiot,pisteet) 
-VALUES  ('HJK','23','7','3'),
-('KuPS','16','8','9'),
-('Ilves','15','11','7'),
-('FC Lahti','12','13','8');
+VALUES  ('HJK', 'ottelut', '23', '7', '3', 'pisteet'),
+('KuPS', 'ottelut', '16','8','9', 'pisteet'),
+('Ilves', 'ottelut', '15','11','7', 'pisteet'),
+('FC Lahti', 'ottelut', '12','13','8', 'pisteet');
