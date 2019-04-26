@@ -8,18 +8,7 @@
 
 <?php
 
-$yhteys = "mysql:host=localhost;dbname=veikkausliiga";
-$kayttajatunnus = "root";
-$salasana = "";
-
-try {
-	$yhteys = new PDO($yhteys, $kayttajatunnus, $salasana);
-	$yhteys->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$yhteys->exec("SET CHARACTER SET utf8;");
-}
-catch (PDOException $e) {
-	die("Tietokantaan ei saada yhteyttä. Virhe: ".$e);
-}
+include("yhteys.php");
 
 $kysely = $yhteys->prepare("SELECT joukkue, voitot, tasapelit, tappiot FROM sarjataulukko");
     $kysely->execute();
@@ -28,7 +17,6 @@ $kysely = $yhteys->prepare("SELECT joukkue, voitot, tasapelit, tappiot FROM sarj
 	echo "<tr><th>joukkue</th><th>ottelut</th><th>voitot</th><th>tasapelit</th><th>tappiot</th><th>pisteet</th></tr>";
     while ($rivi = $kysely->fetch()) {
 
-		// Laske ottelut ja pisteet
 		$ottelut = $rivi['voitot'] + $rivi['tasapelit'] + $rivi['tappiot'];
 		$pisteet = $rivi['voitot'] * 3 + $rivi['tasapelit'] * 1;
 
