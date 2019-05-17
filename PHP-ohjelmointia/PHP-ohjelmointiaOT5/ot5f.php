@@ -6,5 +6,13 @@
 </head>
 <body>
     
+<?php
+
+include("yhteys.php");
+
+
+
+?>
+
 </body>
 </html>
