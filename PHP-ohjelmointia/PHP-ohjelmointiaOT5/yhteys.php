@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>ot5a2</title>
-</head>
-<body>
-    
 <?php
 
 $yhteys = "mysql:host=localhost;dbname=veikkausliiga";
@@ -22,6 +14,3 @@ catch (PDOException $e) {
 }
 
 ?>
-
-</body>
-</html>

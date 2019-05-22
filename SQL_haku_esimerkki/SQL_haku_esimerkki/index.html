@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax-jQuery-PHP-SQL_JSON Demo</title>
+        <meta charset="UTF-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    </head>
+    <body>  
+
+	Anna haettavan id-numero: <input name="id" id="id"/>
+	<input type="button" name="nappi" id="nappi" value="Hae"/>
+
+	<br/>
+	<div id="tulostuslaatikko"></div>
+	<script>
+	//Ohjelma hakee tietokannasta halutun henkilön puhelinnumeron
+		$(function () {   
+			$("#nappi").click(function () {
+				var urli = "ohjelma.php"; //palvelimella ajetava ohjelma
+				var id = $("#id").val(); //haetava
+				var data = { "id":id }; //palvelimelle lähtevä data JSON-muodossa
+				$.ajax({
+					url: urli,//puhelinluettelo.php
+					data: data, //lähtevä data eli haettavan id-numero
+					success: function(result) { //result on palaava data eli kannasta haetun henkilön tiedot JSON-muodossa
+						tulosta(result); 
+					}
+				})
+			});
+		});
+		//Tulostus
+		function tulosta(result){
+			if(result.length > 0) { //Jos on löytynyt
+				$("#tulostuslaatikko").html("Puhelinnumero: " + result[0].puhelin);
+			}
+			else {
+				$("#tulostuslaatikko").html("Ei löydy!");
+			}
+		}
+     </script>
+    </body>
+</html>
+

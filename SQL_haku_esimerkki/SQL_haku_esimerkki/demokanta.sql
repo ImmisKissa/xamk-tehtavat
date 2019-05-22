@@ -2,7 +2,7 @@
 -- Create schema demokanta
 --
 DROP DATABASE IF EXISTS demokanta;
-CREATE DATABASE veikka DEFAULT CHARACTER SET utf8 COLLATE utf8_swedish_ci;
+CREATE DATABASE demokanta DEFAULT CHARACTER SET utf8 COLLATE utf8_swedish_ci;
 USE demokanta;
 DROP TABLE IF EXISTS ihmiset;
 CREATE TABLE ihmiset (
