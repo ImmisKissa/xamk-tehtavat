@@ -26,11 +26,10 @@ session_start();
 
 if(isset($_REQUEST['rekisteroidy'])) {
     $_SESSION['tunnus'] = $_REQUEST['tunnus'];
-    $_SESSION['salasana'] = $_REQUEST['salasana'] == $_SESSION['salasana_uudelleen'] = $_REQUEST['salasana_uudelleen'];
+    $_SESSION['salasana'] = $_REQUEST['salasana_uudelleen'];
+    $_SESSION['salasana_uudelleen'] = $_REQUEST['salasana'];
 
     header("location:kirjautuminen.php");
-} else {
-    
 }
 
 ?>
