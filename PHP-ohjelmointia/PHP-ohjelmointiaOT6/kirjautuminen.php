@@ -12,7 +12,7 @@ session_start();
 </head>
 <body>
     
-<form>
+<form action="" method="POST">
     <p>Kirjautuminen</p>
         <label for="tunnus"></label>
             <p>Tunnus: <input type="text" name="tunnus"></p>
@@ -24,8 +24,14 @@ session_start();
 <?php
 
 if(isset($_REQUEST['kirjaudu'])) {
+
+    $tunnus = $_POST['tunnus'];
+    $salasana = $_POST['salasana'];
+
     $_SESSION['tunnus'] = $_REQUEST['tunnus'];
     $_SESSION['salasana'] = $_REQUEST['salasana'];
+
+    
 
     header("location:demoSivu.html");
 }
