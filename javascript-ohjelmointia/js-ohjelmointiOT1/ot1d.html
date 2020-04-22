@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ot1d</title>
+</head>
+<body>
+    <h1>Valuuttalaskin</h1>
+
+    <p>Summa: <input type="text" name="summa" id="summa"></p>
+
+    <select id="valinta">
+        <option value="eu">EUR->USD</option>
+        <option value="ue">USD->EUR</option>
+    </select>
+
+    <button type="button" onclick="muunna()">Muunna</button>
+
+    <p id="tulos"></p>
+
+<script>
+
+function muunna() {
+
+    var x = document.getElementById("summa").value;
+    var valinta = document.getElementById("valinta").value;
+
+    var raha;
+    switch (valinta) {
+        case "eu":
+            raha = x + " € on " + eu(x) + " $";
+            break;
+        case "ue":
+            raha = x + " $ on " + ue(x) + " €";
+            break;
+    }
+
+    document.getElementById("tulos").innerHTML = raha;
+}
+
+function eu(e) {
+    var u = e * 1.09;
+    return u;
+}
+
+function ue(u) {
+    var e = u * 0.9;
+    return e;
+}
+
+</script>
+</body>
+</html>

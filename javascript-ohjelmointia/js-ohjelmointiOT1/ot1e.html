@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ot1e</title>
+</head>
+<body>
+    <h1>Presidentinvaalit 2024</h1>
+    <h3>Ääntenlaskenta</h3>
+
+    <button type="button" onclick="kaksi()">2</button>
+    <button type="button" onclick="kolme()">3</button>
+    <button type="button" onclick="nelja()">4</button>
+    <button type="button" onclick="viisi()">5</button>
+    <button type="button" onclick="kuusi()">6</button>
+
+    <h2>Tulos:</h2>
+
+    <p>2. Ville Koivisto: <p id="ville">0</p> </p>
+    <p>3. Urho Obama: <p id="urho">0</p> </p>
+    <p>4. Marja Kekki: <p id="marja">0</p> </p>
+    <p>5. Sinikka Soini: <p id="sinikka">0</p> </p>
+    <p>6. Jussi Haavisto: <p id="jussi">0</p> </p>
+
+<script>
+    let kaa = 0;
+    let koo = 0;
+    let nee = 0;
+    let vii = 0;
+    let kuu = 0;
+
+function kaksi() {
+    kaa++;
+    document.getElementById("ville").innerHTML = kaa;
+}
+
+function kolme() {
+    koo++;
+    document.getElementById("urho").innerHTML = koo;
+}
+
+function nelja() {
+    nee++;
+    document.getElementById("marja").innerHTML = nee;
+}
+
+function viisi() {
+    vii++;
+    document.getElementById("sinikka").innerHTML = vii;
+}
+
+function kuusi() {
+    kuu++;
+    document.getElementById("jussi").innerHTML = kuu;
+}
+
+</script>
+</body>
+</html>
