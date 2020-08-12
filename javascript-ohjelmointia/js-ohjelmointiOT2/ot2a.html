@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ot2a
+
+    </title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+
+let kulavaTunti = new Date().getHours();
+var tulostus = "";
+
+if(kulavaTunti < 12 && kulavaTunti > 6) {
+    tulostus = "Hyvää huomenta!";
+} else if(kulavaTunti > 12 && kulavaTunti < 18) {
+    tulostus = "Hyvää päivää!";
+} else if(kulavaTunti < 18 && kulavaTunti > 21) {
+    tulostus = "Hyvää iltaa!";
+} else {
+    tulostus = "Hyvää yötä!";
+}
+
+document.getElementById("demo").innerHTML = tulostus;
+
+</script>
+</body>
+</html>
