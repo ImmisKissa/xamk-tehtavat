@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ot2c</title>
+</head>
+<body>
+    <img id="kuva1" src="noppa1.jpg"/>
+    <img id="kuva2" src="noppa2.jpg"/>
+    <img id="kuva3" src="noppa3.jpg" style="display: none;"/>
+    <img id="kuva4" src="noppa4.jpg" style="display: none;"/>
+    <img id="kuva5" src="noppa5.jpg" style="display: none;"/>
+    <img id="kuva6" src="noppa6.jpg" style="display: none;"/>
+    <br>
+    <button id="nappi" onclick="pelaa()">Pelaa</button>
+    <br>
+    <p id="tulos"></p>
+
+<script>
+
+var img1 = document.getElementById("kuva1");
+var img2 = document.getElementById("kuva2");
+document.getElementById("kuva3");
+document.getElementById("kuva4");
+document.getElementById("kuva5");
+document.getElementById("kuva6");
+
+function pelaa() {
+    document.getElementById("tulos").innerHTML = "";
+
+    var luku1 = Math.floor((Math.random()*6)+1);
+        if(luku1 == 1) {
+            img1.src = "noppa1.jpg";
+        }
+        if(luku1 == 2) {
+            img1.src = "noppa2.jpg";
+        }
+        if(luku1 == 3) {
+            img1.src = "noppa3.jpg";
+        }
+        if(luku1 == 4) {
+            img1.src = "noppa4.jpg"; 
+        }
+        if(luku1 == 5) {
+            img1.src = "noppa5.jpg";
+        }
+        if(luku1 == 6) {
+            img1.src = "noppa6.jpg";
+        }
+
+    var luku2 = Math.floor((Math.random()*6)+1);
+        if(luku2 == 1) {
+            img2.src = "noppa1.jpg";
+        }
+        if(luku2 == 2) {
+            img2.src = "noppa2.jpg";
+        }
+        if(luku2 == 3) {
+            img2.src = "noppa3.jpg";
+        }
+        if(luku2 == 4) {
+            img2.src = "noppa4.jpg"; 
+        }
+        if(luku2 == 5) {
+            img2.src = "noppa5.jpg";
+        }
+        if(luku2 == 6) {
+            img2.src = "noppa6.jpg";
+        }
+
+        if(luku1 == 1 && luku2 == 1) {
+            document.getElementById("tulos").innerHTML = "Ykköspari";
+        }
+        if(luku1 == 2 && luku2 == 2) {
+            document.getElementById("tulos").innerHTML = "Kakkospari";
+        }
+        if(luku1 == 3 && luku2 == 3) {
+            document.getElementById("tulos").innerHTML = "Kolmospari";
+        }
+        if(luku1 == 4 && luku2 == 4) {
+            document.getElementById("tulos").innerHTML = "Nelospari";
+        }
+        if(luku1 == 5 && luku2 == 5) {
+            document.getElementById("tulos").innerHTML = "Viitospari";
+        }
+        if(luku1 == 6 && luku2 == 6) {
+            document.getElementById("tulos").innerHTML = "Kuutospari";
+        }
+}
+
+</script>
+</body>
+</html>
