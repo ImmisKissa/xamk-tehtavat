@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ot2d</title>
+</head>
+<body>
+    <h1>Lippuautomaatti</h1>
+
+    2.luokka <input type="radio" name="luokka" id="2luokka" checked>
+    <br>
+    1.luokka <input type="radio" name="luokka" id="1luokka">
+    <br><br>
+
+    Meno: <input type="radio" name="matka" id="meno">
+    <br>
+    Meno-paluu: <input type="radio" name="matka" id="meno.paluu">
+    <br><br>
+
+    Alennus: <input type="checkbox" name="alennus" id="alennus">
+    <br><br>
+
+    Lippuja (kpl): <select name="lippu" id="lippu">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select><br><br>
+    <button id="nappi" onclick="osta()">Osta</button><br>
+    <b id="hinta"></b>
+
+<script>
+
+function osta() {
+    var tulostus = "";
+    var lippu = document.getElementById("lippu").value;
+    var luokka1 = 140.61;
+    var luokka2 = 86.10;
+
+    if(document.getElementById("2luokka").checked && document.getElementById("meno").checked) {
+        tulostus = "Kokonaishinta: " + luokka2 + "€";
+    } else if(document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked) {
+        tulostus = "Kokonaishinta: " + luokka2 * 2 + "€";
+    } else if(document.getElementById("1luokka").checked && document.getElementById("meno").checked) {
+        tulostus = "Kokonaishinta: " + luokka1 + "€";
+    } else if(document.getElementById("1luokka").checked && document.getElementById("meno.paluu").checked) {
+        tulostus = "Kokonaishinta: " + luokka1 * 2 + "€";
+    }
+    document.getElementById("hinta").innerHTML = tulostus;
+}
+
+</script>
+</body>
+</html>
