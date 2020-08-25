@@ -45,6 +45,13 @@ function osta() {
     } else if(document.getElementById("1luokka").checked && document.getElementById("meno.paluu").checked) {
         tulostus = "Kokonaishinta: " + luokka1 * 2 + "€";
     }
+    
+    if(document.getElementById("2luokka").checked && document.getElementById("meno").checked && document.getElementById("alennus").checked) {
+        tulostus = "Kokonaishinta: " + luokka2 / 2 + "€";
+    } else if(document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked) {
+        tulostus = "Kokonaishinta: " + luokka2 * 2 / 2 + "€";
+    }
+
     document.getElementById("hinta").innerHTML = tulostus;
 }
 
