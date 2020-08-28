@@ -8,14 +8,14 @@
 <body>
     <h1>Lippuautomaatti</h1>
 
-    2.luokka <input type="radio" name="luokka" id="2luokka" checked>
+    2.luokka <input type="radio" value="86.10" name="luokka" id="2luokka" checked>
     <br>
-    1.luokka <input type="radio" name="luokka" id="1luokka">
+    1.luokka <input type="radio" value="140.61" name="luokka" id="1luokka">
     <br><br>
 
-    Meno: <input type="radio" name="matka" id="meno">
+    Meno: <input type="radio" value="1" name="matka" id="meno">
     <br>
-    Meno-paluu: <input type="radio" name="matka" id="meno.paluu">
+    Meno-paluu: <input type="radio" value="2" name="matka" id="meno.paluu">
     <br><br>
 
     Alennus: <input type="checkbox" name="alennus" id="alennus">
@@ -33,22 +33,16 @@
 function osta() {
     var tulostus = "";
     var lippu = document.getElementById("lippu").value;
-    var luokka1 = 140.61;
-    var luokka2 = 86.10;
+    var meno = document.getElementById("meno").value;
+    var menopaluu = document.getElementById("meno.paluu").value;
+    var luokka1 = document.getElementById("1luokka").value;
+    var luokka2 = document.getElementById("2luokka").value;
 
-    if(document.getElementById("2luokka").checked && document.getElementById("meno").checked) {
-        tulostus = "Kokonaishinta: " + luokka2 + "€";
-    } else if(document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked) {
-        tulostus = "Kokonaishinta: " + luokka2 * 2 + "€";
-    } else if(document.getElementById("1luokka").checked && document.getElementById("meno").checked) {
-        tulostus = "Kokonaishinta: " + luokka1 + "€";
-    } else if(document.getElementById("1luokka").checked && document.getElementById("meno.paluu").checked) {
-        tulostus = "Kokonaishinta: " + luokka1 * 2 + "€";
-    }
     
+
     if(document.getElementById("2luokka").checked && document.getElementById("meno").checked && document.getElementById("alennus").checked) {
         tulostus = "Kokonaishinta: " + luokka2 / 2 + "€";
-    } else if(document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked) {
+    } else if( document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked) {
         tulostus = "Kokonaishinta: " + luokka2 * 2 / 2 + "€";
     }
 

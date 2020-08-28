@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ot3a</title>
+</head>
+<body>
+    <p id="numerot"></p>
+
+<script>
+
+var luvut = [6, 12, 24, 48, 92];
+var ka = 0;
+var pienin = luvut[0];
+var isoin = luvut[4];
+
+ka = luvut[0] + luvut[1] + luvut[2] + luvut[3] + luvut[4] / 5;
+
+document.getElementById("numerot").innerHTML = luvut + "<br>Keskiarvo: " + ka + 
+"<br>Pienin luku: " + pienin + "<br>Isoin luku: " + isoin;
+
+</script>
+</body>
+</html>

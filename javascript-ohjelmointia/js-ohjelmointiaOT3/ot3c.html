@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ot3c</title>
+</head>
+<body>
+    <div id="kuva">
+        <img src="Koala.jpg" alt="" id="mainImg">
+    </div>
+
+    <div id="kuvalista">
+        <a href="javascript:edellinen('mainImg')"><img src="prev.jpg" alt=""></a>
+        <a href="javascript:seuraava('mainImg')"><img src="next.jpg" alt=""></a>
+    </div>
+
+<script>
+
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = "Chrysanthemum.jpg";
+
+imgArray[1] = new Image();
+imgArray[1].src = 'Desert.jpg';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'Hydrangeas.jpg';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'Jellyfish.jpg';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'Lighthouse.jpg';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'Penguins.jpg';
+
+imgArray[6] = new Image();
+imgArray[6].src = 'Tulips.jpg';
+
+</script>
+    
+</body>
+</html>

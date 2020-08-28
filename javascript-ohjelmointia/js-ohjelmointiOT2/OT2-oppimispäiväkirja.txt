@@ -1,4 +1,5 @@
 a) opin käyttämään Date ja getHours() funktioita
-b) 
+b) jätin välistä
 c) opin Math funktioita
+d) 
 e) opin while toistorakennetta eri tavalla
