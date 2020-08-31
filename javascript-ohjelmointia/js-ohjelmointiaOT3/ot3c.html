@@ -6,6 +6,7 @@
     <title>ot3c</title>
 </head>
 <body>
+<center>
     <div id="kuva">
         <img src="Koala.jpg" alt="" id="mainImg">
     </div>
@@ -17,30 +18,50 @@
 
 <script>
 
-var imgArray = new Array();
+var kuvat = [];
+kuvat[0] = new Image();
+kuvat[0].src = 'Chrysanthemum.jpg';
 
-imgArray[0] = new Image();
-imgArray[0].src = "Chrysanthemum.jpg";
+kuvat[1] = new Image();
+kuvat[1].src = 'Desert.jpg';
 
-imgArray[1] = new Image();
-imgArray[1].src = 'Desert.jpg';
+kuvat[2] = new Image();
+kuvat[2].src = 'Hydrangeas.jpg';
 
-imgArray[2] = new Image();
-imgArray[2].src = 'Hydrangeas.jpg';
+kuvat[3] = new Image();
+kuvat[3].src = 'Jellyfish.jpg';
 
-imgArray[3] = new Image();
-imgArray[3].src = 'Jellyfish.jpg';
+kuvat[4] = new Image();
+kuvat[4].src = 'Lighthouse.jpg';
 
-imgArray[4] = new Image();
-imgArray[4].src = 'Lighthouse.jpg';
+kuvat[5] = new Image();
+kuvat[5].src = 'Penguins.jpg';
 
-imgArray[5] = new Image();
-imgArray[5].src = 'Penguins.jpg';
+kuvat[6] = new Image();
+kuvat[6].src = 'Tulips.jpg';
 
-imgArray[6] = new Image();
-imgArray[6].src = 'Tulips.jpg';
+kuvat[7] = new Image();
+kuvat[7].src = 'Koala.jpg';
+
+i = 0;
+
+function seuraava() {
+    i++;
+    if(i == 8) {
+        i = 0;
+    }
+    document.getElementById("kuva").src = kuvat[i].src;
+}
+
+function edellinen() {
+    i--;
+    if(i == -1) {
+        i = 7;
+    }
+    document.getElementById("kuva").src = kuvat[i].src;
+}
 
 </script>
-    
+</center>
 </body>
 </html>
