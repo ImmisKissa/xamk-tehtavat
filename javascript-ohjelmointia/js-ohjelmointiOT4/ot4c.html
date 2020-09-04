@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ot4c</title>
+</head>
+<body>
+    <button onclick="nayta()">Näytä</button>
+    <p id="demo"></p>
+
+<script>
+
+var ihminen = {etunimi:"Minna",sukunimi:"Peitsari",ika:"32"};
+
+function nayta() {
+    document.getElementById("demo").innerHTML = ihminen.etunimi + " " +
+    ihminen.sukunimi + " on " + ihminen.ika + " vuotias";
+}
+
+</script>
+</body>
+</html>

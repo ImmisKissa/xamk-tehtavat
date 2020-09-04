@@ -12,8 +12,8 @@
     </div>
 
     <div id="kuvalista">
-        <a href="javascript:edellinen('mainImg')"><img src="prev.jpg" alt=""></a>
-        <a href="javascript:seuraava('mainImg')"><img src="next.jpg" alt=""></a>
+        <a href="javascript:edellinen('mainImg')"><img src="prev.jpg" id="edellinen" alt=""></a>
+        <a href="javascript:seuraava('mainImg')"><img src="next.jpg" id="seuraava" alt=""></a>
     </div>
 
 <script>
@@ -50,7 +50,7 @@ function seuraava() {
     if(i == 8) {
         i = 0;
     }
-    document.getElementById("kuva").src = kuvat[i].src;
+    document.getElementById("mainImg").src = kuvat[i].src;
 }
 
 function edellinen() {
@@ -58,7 +58,7 @@ function edellinen() {
     if(i == -1) {
         i = 7;
     }
-    document.getElementById("kuva").src = kuvat[i].src;
+    document.getElementById("mainImg").src = kuvat[i].src;
 }
 
 </script>
