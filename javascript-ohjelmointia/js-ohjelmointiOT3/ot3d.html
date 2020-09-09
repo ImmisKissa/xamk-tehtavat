@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ot3d</title>
+
+<style>
+
+table, th {
+    border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+    <h1>Teatteri</h1>
+    <p>X = Varattu O = Vapaa</p>
+    <h4>Anna paikan numero:</h4>
+    <input type="text" name="numero" id="paikanNumero">
+    <button name="nappi" onclick="varaa()">Varaa</button><br>
+    <p id="paikka"></p><br>
+    <table id="paikat">
+        <tr>
+            <th>1 X</th> <th>2 X</th> <th>3 O</th>
+            <th>4 O</th> <th>5 O</th> <th>6 O</th>
+            <th>7 X</th> <th>8 O</th> <th>9 O</th>
+            <th>10 O</th>
+        </tr>
+        <tr>
+            <th>11 O</th> <th>12 O</th> <th>13 X</th>
+            <th>14 X</th> <th>15 O</th> <th>16 X</th>
+            <th>17 O</th> <th>18 X</th> <th>19 O</th>
+            <th>20 O</th>
+        </tr>
+        <tr>
+            <th>21 O</th> <th>22 X</th> <th>23 X</th>
+            <th>24 O</th> <th>25 O</th> <th>26 X</th>
+            <th>27 X</th> <th>28 O</th> <th>29 X</th>
+            <th>30 X</th>
+        </tr>
+        <tr>
+            <th>31 X</th> <th>32 X</th> <th>33 X</th>
+            <th>34 O</th> <th>35 O</th> <th>36 O</th>
+            <th>37 O</th> <th>38 O</th> <th>39 X</th>
+            <th>40 O</th>
+        </tr>
+        <tr>
+            <th>41 O</th> <th>42 X</th> <th>43 X</th>
+            <th>44 X</th> <th>45 X</th> <th>46 X</th>
+            <th>47 X</th> <th>48 X</th> <th>49 O</th>
+            <th>50 X</th>
+        </tr>
+        <tr>
+            <th>51 X</th> <th>52 O</th> <th>53 O</th>
+            <th>54 X</th> <th>55 X</th> <th>56 O</th>
+            <th>57 X</th> <th>58 X</th> <th>59 X</th>
+            <th>60 X</th>
+        </tr>
+        <tr>
+            <th>61 X</th> <th>62 X</th> <th>63 X</th>
+            <th>64 O</th> <th>65 O</th> <th>66 X</th>
+            <th>67 O</th> <th>68 O</th> <th>69 O</th>
+            <th>70 O</th>
+        </tr>
+        <tr>
+            <th>71 O</th> <th>72 O</th> <th>73 X</th>
+            <th>74 X</th> <th>75 X</th> <th>76 X</th>
+            <th>77 O</th> <th>78 X</th> <th>79 X</th>
+            <th>80 X</th>
+        </tr>
+    </table>
+
+<script>
+
+var varattu = "x";
+var vapaa = "o";
+var paikat = [];
+paikat[0] = "x";
+paikat[1] = "x";
+paikat[2] = "o";
+paikat[3] = "o";
+paikat[4] = "o";
+paikat[5] = "o";
+paikat[6] = "x";
+paikat[7] = "o";
+paikat[8] = "o";
+paikat[9] = "o";
+paikat[10] = "o";
+paikat[11] = "o";
+paikat[12] = "x";
+paikat[13] = "x";
+paikat[14] = "o";
+paikat[15] = "x";
+paikat[16] = "o";
+paikat[17] = "x";
+paikat[18] = "o";
+paikat[19] = "o";
+paikat[20] = "o";
+paikat[21] = "x";
+paikat[22] = "x";
+paikat[23] = "o";
+paikat[24] = "o";
+paikat[25] = "x";
+paikat[26] = "x";
+paikat[27] = "o";
+paikat[28] = "x";
+paikat[29] = "x";
+paikat[30] = "x";
+paikat[31] = "x";
+paikat[32] = "x";
+paikat[33] = "o";
+paikat[34] = "o";
+paikat[35] = "o";
+paikat[36] = "o";
+paikat[37] = "o";
+paikat[38] = "x";
+paikat[39] = "o";
+paikat[40] = "o";
+paikat[41] = "x";
+paikat[42] = "x";
+paikat[43] = "x";
+paikat[44] = "x";
+paikat[45] = "x";
+paikat[46] = "x";
+paikat[47] = "x";
+paikat[48] = "o";
+paikat[49] = "x";
+paikat[50] = "x";
+paikat[51] = "o";
+paikat[52] = "o";
+paikat[53] = "x";
+paikat[54] = "x";
+paikat[55] = "o";
+paikat[56] = "x";
+paikat[57] = "x";
+paikat[58] = "x";
+paikat[59] = "x";
+paikat[60] = "x";
+paikat[61] = "x";
+paikat[62] = "x";
+paikat[63] = "o";
+paikat[64] = "o";
+paikat[65] = "x";
+paikat[66] = "o";
+paikat[67] = "o";
+paikat[68] = "o";
+paikat[69] = "o";
+paikat[70] = "o";
+paikat[71] = "o";
+paikat[72] = "x";
+paikat[73] = "x";
+paikat[74] = "x";
+paikat[75] = "x";
+paikat[76] = "o";
+paikat[77] = "x";
+paikat[78] = "x";
+paikat[79] = "x";
+
+function varaa() {
+    if(document.getElementById("paikanNumero") == varattu) {
+        document.getElementById("paikka").innerHTML = "paikka on varattu!";
+    }
+}
+
+</script>
+</body>
+</html>

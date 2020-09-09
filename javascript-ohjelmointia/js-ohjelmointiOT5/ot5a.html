@@ -6,15 +6,14 @@
     <title>ot5a</title>
 </head>
 <body>
-    <a href="https://www.youtube.com/?gl=FI&hl=fi"> <img src="" onmouseover="naytaKuva('youtube.png');" alt=""/>YouTube</a><br>
-    <a href="https://na.leagueoflegends.com/en-us/"> <img src=""onmouseover="naytaKuva('lol.jpg');" alt=""/>League of Legends</a><br>
-    <a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu"> <img src="" onmouseover="naytaKuva('wiki.png');" alt=""/>Wikipedia</a>
-    <img src="" id="likinKuva" alt="">
+    <a href="https://www.youtube.com/?gl=FI&hl=fi" onmouseover="naytaKuva('youtube.png')">YouTube</a><br>
+    <a href="https://na.leagueoflegends.com/en-us/"><img src="lol.jpg" style="display: none;" id="linkinKuva" onmouseover="naytaKuva()" alt=""> League of Legends</a><br>
+    <a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu" onmouseover="naytaKuva('wiki.png')">Wikipedia</a>
 
 <script>
 
 function naytaKuva(kuva) {
-    document.getElementById("linkinKuva").onmouseover = kuva;
+    document.getElementById("linkinKuva").onmouseover = kuva.src;
 }
 
 </script>
