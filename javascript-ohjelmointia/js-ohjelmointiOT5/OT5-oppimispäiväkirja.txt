@@ -1,0 +1,2 @@
+a) opin näyttämään kuva onmouseover eventtiä käyttämällä kun hiiri tuodaan linkin päälle.
+b) jätin tekemättä
