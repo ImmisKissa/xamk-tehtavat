@@ -6,13 +6,42 @@
     <title>Ot4b</title>
 </head>
 <body>
-    Syötä henkilötunnus: <input type="text" name="hetu" id="hetu">
-    <button id="nappi" onclick="tarkista()">Tarkista</button>
+    <h1>Onko henkilö syntynyt enne 1990</h1>
     <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
 
 <script>
 
+function tarkastaHetu(hetu) {
 
+    var vuosi = hetu.substr(4, 2);
+    var vuosisataMerkki = hetu.substr(6, 1);
+
+    if(vuosisataMerkki == "-") {
+        var vuosisata = '19';
+    } else if(vuosisataMerkki == "A") {
+        var vuosisata = '20';
+    } else {
+        var vuosisata = '18';
+    }
+
+    var syntyma = vuosisata + vuosi;
+
+    if(syntyma <= '1990') {
+        return "Henkilö on syntynyt vuonna 1990 tai ennen";
+    } else {
+        return "Henkilö on syntynyt vuoden 1990 jälkeen";
+    }
+}
+    document.getElementById("demo").innerHTML = tarkastaHetu('280801A581H');
+    console.log(tarkastaHetu('280801A581H'));
+
+    document.getElementById("demo2").innerHTML = tarkastaHetu('280800-581H');
+    console.log(tarkastaHetu('280800-581H'));
+
+    document.getElementById("demo3").innerHTML = tarkastaHetu('280801+581H');
+    console.log(tarkastaHetu('280801+581H'));
     
 </script>
 </body>

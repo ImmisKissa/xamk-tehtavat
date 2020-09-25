@@ -6,24 +6,36 @@
     <title>Ot4a</title>
 </head>
 <body>
-    Postinumero: <input type="text" name="postinumero" id="postinumero" onblur="postinumeroTesti(this.value)">
-    <button id="nappi" onclick="tarkastaPostiNumero()">Tarkasta</button>
+    <h1>Postinumeron oikeellisuus</h1>
     <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
 
 <script>
 
-    function postinumeroTesti(postinumero) {
-        var postinumero;
-
-        if(isNaN(postinumero) || postinumero.length < 5 || postinumero.length > 5) {
-            document.getElementById("demo").innerHTML = false;
-            console.log(postinumero);
+    function tarkastaPostiNumero(postinumero) {
+        if(postinumero.length == 5 && !isNaN(postinumero)) {
+            return true;
         } else {
-            isNaN(postinumero) || postinumero.length / 5;
-            document.getElementById("demo").innerHTML = true;
-            console.log(postinumero);
+            return false;
         }
     }
+    document.getElementById("demo").innerHTML = tarkastaPostiNumero('12345');
+    console.log(tarkastaPostiNumero('12345'));
+
+    document.getElementById("demo1").innerHTML = tarkastaPostiNumero('123');
+    console.log(tarkastaPostiNumero('123'));
+
+    document.getElementById("demo2").innerHTML = tarkastaPostiNumero('1234567');
+    console.log(tarkastaPostiNumero('1234567'));
+
+    document.getElementById("demo3").innerHTML = tarkastaPostiNumero('kissa');
+    console.log(tarkastaPostiNumero('kissa'));
+
+    document.getElementById("demo4").innerHTML = tarkastaPostiNumero('50170');
+    console.log(tarkastaPostiNumero('50170'));
 
 </script>
 </body>
