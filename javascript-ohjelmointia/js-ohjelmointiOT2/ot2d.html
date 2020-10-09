@@ -13,9 +13,9 @@
     1.luokka <input type="radio" value="140.61" name="luokka" id="1luokka">
     <br><br>
 
-    Meno: <input type="radio" value="1" name="matka" id="meno">
+    Meno: <input type="radio" name="matka" id="meno">
     <br>
-    Meno-paluu: <input type="radio" value="2" name="matka" id="meno.paluu">
+    Meno-paluu: <input type="radio" name="matka" id="meno.paluu">
     <br><br>
 
     Alennus: <input type="checkbox" name="alennus" id="alennus">
@@ -33,17 +33,14 @@
 function osta() {
     var tulostus = "";
     var lippu = document.getElementById("lippu").value;
-    var meno = document.getElementById("meno").value;
-    var menopaluu = document.getElementById("meno.paluu").value;
-    var luokka1 = document.getElementById("1luokka").value;
     var luokka2 = document.getElementById("2luokka").value;
-
-    
+    var luokka1 = document.getElementById("1luokka").value;
 
     if(document.getElementById("2luokka").checked && document.getElementById("meno").checked && document.getElementById("alennus").checked) {
         tulostus = "Kokonaishinta: " + luokka2 / 2 + "€";
-    } else if( document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked) {
-        tulostus = "Kokonaishinta: " + luokka2 * 2 / 2 + "€";
+    } else {
+        document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked;
+        tulostus = "Kokonaishinta:" + luokka2 * 2 / 2 + "€";
     }
 
     document.getElementById("hinta").innerHTML = tulostus;

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ot3b</title>
+</head>
+<body>
+    Syötä elokuva: <input type="text" name="syotto" id="syotto"><br>
+    <button type="button" onclick="lisaaLeffa()">Lisää</button><br>
+    Hae elokuva: <input type="text" name="haku" id="haku"><br>
+    <button type="button" onclick="haeLeffa()">Hae</button><br><br>
+    <button type="button" onclick="tulosta()">Tulosta</button><br>
+    <p id="katsottu"></p>
+    <p id="leffaLista"></p>
+
+<script>
+
+var leffat = [];
+leffat[0] = "Fast and Furious 4";
+leffat[1] = "Harry Potter ja viisasten kivi";
+leffat[2] = "Tuntematon sotilas";
+leffat[3] = "Fast and Furious 7";
+leffat[4] = "Robin Hood";
+leffat[5] = "Justice League";
+
+function lisaaLeffa() {
+    var leffa = document.getElementById("syotto").value;
+    document.getElementById("syotto").value = "";
+    leffat.push(leffa);
+
+    tulosta(leffat);
+}
+
+function tulosta() {
+    leffat.sort();
+    var tulostus = "";
+    var i;
+    for(i = 0; i < leffat.length; i++) {
+        tulostus += leffat[i] + "<br>";
+    }
+
+    document.getElementById("leffaLista").innerHTML = tulostus;
+}
+
+function haeLeffa() {
+    var onkoKatsottu = document.getElementById("haku").value;
+    var katsottu = "";
+    var onko = leffat.includes(onkoKatsottu);
+    document.getElementById("haku").value = "";
+    if(onko == true) {
+        katsottu = "Elokuva on katsottu";
+    } else {
+        katsottu = "Elokuvaa ei olla katsottu";
+    }
+    document.getElementById("katsottu").innerHTML = katsottu;
+}
+
+</script>
+</body>
+</html>
