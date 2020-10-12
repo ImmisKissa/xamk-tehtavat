@@ -36,13 +36,6 @@ function osta() {
     var luokka2 = document.getElementById("2luokka").value;
     var luokka1 = document.getElementById("1luokka").value;
 
-    if(document.getElementById("2luokka").checked && document.getElementById("meno").checked && document.getElementById("alennus").checked) {
-        tulostus = "Kokonaishinta: " + luokka2 / 2 + "€";
-    } else {
-        document.getElementById("2luokka").checked && document.getElementById("meno.paluu").checked && document.getElementById("alennus").checked;
-        tulostus = "Kokonaishinta: " + luokka2 * 2 / 2 + "€";
-    }
-
     document.getElementById("hinta").innerHTML = tulostus;
 }
 
