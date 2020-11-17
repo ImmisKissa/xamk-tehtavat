@@ -1,5 +1,5 @@
 a) opin käyttämään Date ja getHours() funktioita
 b) jätin välistä
 c) opin Math funktioita
-d) 
+d) opin vähän kaikenlaista koska en ollut ikinää tehnyt tämän kaltaista tehytävää.
 e) opin while toistorakennetta eri tavalla

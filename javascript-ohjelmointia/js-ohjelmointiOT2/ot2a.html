@@ -15,11 +15,11 @@
 let kulavaTunti = new Date().getHours();
 var tulostus = "";
 
-if(kulavaTunti < 12 && kulavaTunti > 6) {
+if(kulavaTunti < 12) {
     tulostus = "Hyvää huomenta!";
-} else if(kulavaTunti > 12 && kulavaTunti < 18) {
+} else if(kulavaTunti < 18) {
     tulostus = "Hyvää päivää!";
-} else if(kulavaTunti < 18 && kulavaTunti > 21) {
+} else if(kulavaTunti < 21) {
     tulostus = "Hyvää iltaa!";
 } else {
     tulostus = "Hyvää yötä!";

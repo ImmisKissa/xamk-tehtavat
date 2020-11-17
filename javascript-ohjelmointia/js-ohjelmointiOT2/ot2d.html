@@ -13,9 +13,9 @@
     1.luokka <input type="radio" value="140.61" name="luokka" id="1luokka">
     <br><br>
 
-    Meno: <input type="radio" name="matka" id="meno">
+    Meno: <input type="radio" value="1" name="matka" id="meno" checked>
     <br>
-    Meno-paluu: <input type="radio" name="matka" id="meno.paluu">
+    Meno-paluu: <input type="radio" value="2" name="matka" id="meno.paluu">
     <br><br>
 
     Alennus: <input type="checkbox" name="alennus" id="alennus">
@@ -31,12 +31,23 @@
 <script>
 
 function osta() {
-    var tulostus = "";
-    var lippu = document.getElementById("lippu").value;
-    var luokka2 = document.getElementById("2luokka").value;
-    var luokka1 = document.getElementById("1luokka").value;
 
+    let loppuSumma = 0;
+    var tulostus = "";
+    var lippujenLkm = document.getElementById("lippu").value;
+    var luokkaHinta = document.querySelector('[name="luokka"]:checked').value;
+    var menopaluu = document.querySelector('[name="matka"]:checked').value;
+    let alennus = document.getElementById('alennus').checked;
+    let luokka2 = document.getElementById('2luokka').checked;
+    let alennusKerroin = 1;
+    if(alennus && luokka2) {
+        alennusKerroin = 0.5;
+    }
+
+    loppuSumma = lippujenLkm * luokkaHinta * menopaluu * alennusKerroin;
+    tulostus = `Kokonaishinta: ${loppuSumma}€`;
     document.getElementById("hinta").innerHTML = tulostus;
+    console.log(loppuSumma);
 }
 
 </script>
